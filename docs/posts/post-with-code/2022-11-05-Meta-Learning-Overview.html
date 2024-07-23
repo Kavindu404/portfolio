@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kavindu Piyumal">
+<meta name="dcterms.date" content="2022-11-12">
 
-<title>Meta Learning - An Overview – blog</title>
+<title>Meta Learning – blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,14 +144,30 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Meta Learning - An Overview</h1>
-                      </div>
+      <h1 class="title">Meta Learning</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">code</div>
+                <div class="quarto-category">analysis</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kavindu Piyumal </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 12, 2022</p>
+      </div>
+    </div>
     
       
     </div>
@@ -166,6 +184,8 @@ window.Quarto = {
 
 
 
+<section id="meta-learning---an-overview" class="level1">
+<h1>Meta Learning - An Overview</h1>
 <p>Recent development of meta learning has driven the industry to a complete different trajectory compared to the ordinary and traditional learning algorithms. In ordinary way, we have fixed learning algorithms to perform specific tasks. But in meta learning, we try to improve the learning algorithm so that it is able to perform a range of tasks from the same distribution.</p>
 <p>Let’s take a conventional supervised learning as an example. To start with the task, we will need a dataset <em>D</em> that is consisting of tuples of (x, y) where x refers to data points and y refers to labels. Then, we train a predictive model to predict labels; <span class="math inline">\(\hat{y}\)</span> = <span class="math inline">\(f_{\theta}\)</span>(x). Note that the model is parameterized by <span class="math inline">\(\theta\)</span>. We tarin the predictive model by solving;</p>
 <p><span class="math inline">\(\theta^{*}\)</span> = arg <span class="math inline">\(min_{\theta}\)</span> <em>L</em>(<em>D</em>;<span class="math inline">\(\theta\)</span>, <em>w</em>)</p>
@@ -180,6 +200,7 @@ window.Quarto = {
 <p>So, hope you were able to get some idea about meta learning and its background. If you want to look into this further, I suggest <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9428530">this review paper</a> which was the reference for this article.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
