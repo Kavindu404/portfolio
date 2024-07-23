@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kavindu Piyumal">
-<meta name="dcterms.date" content="2024-07-19">
+<meta name="dcterms.date" content="2022-10-28">
 
-<title>Welcome To My Blog – blog</title>
+<title>Broadcasting – blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -115,9 +149,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Welcome To My Blog</h1>
+      <h1 class="title">Broadcasting</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                <div class="quarto-category">analysis</div>
               </div>
                   </div>
   </div>
@@ -135,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 19, 2024</p>
+        <p class="date">October 28, 2022</p>
       </div>
     </div>
     
@@ -154,11 +188,126 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+<section id="broadcasting" class="level1">
+<h1>Broadcasting</h1>
+<p>In this blog, I am going to breakdown the idea of broadcasting in python. Broadcasting is one of the main concepts that you should know about to get the best out of deep learning frameworks. Let’s see what is it.</p>
+<p>To start with, say you have two variables, x and y as below;</p>
+<div id="d13292e5" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> torch.tensor(<span class="dv">10</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> torch.tensor([<span class="dv">100</span>,<span class="dv">200</span>,<span class="dv">300</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now, let’s say, you want to add x for each element in y. So we can simply do as follows;</p>
+<div id="33fc82a1" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> x <span class="op">+</span> y<span class="op">;</span>z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>tensor([110, 210, 310])</code></pre>
+</div>
+</div>
+<p>But, how does this actually work? x is just a scalar and we just add that into a tensor. This is done with the help of broadcasting. Let’s see how it work under the hood. Say we have two tensors, a and b as below;</p>
+<div id="e042d48f" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> torch.tensor([<span class="fl">1.</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> torch.tensor([[<span class="fl">10.</span>,<span class="dv">20</span>,<span class="dv">30</span>],</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                  [<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>]])</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>a,b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>(tensor([1., 2., 3.]),
+ tensor([[10., 20., 30.],
+         [40., 50., 60.]]))</code></pre>
+</div>
+</div>
+<div id="69af6786" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a.shape, b.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>(torch.Size([3]), torch.Size([2, 3]))</code></pre>
+</div>
+</div>
+<p>Let’s see what happen if we add them up …</p>
+<div id="8429b6f2" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a <span class="op">+</span> b<span class="op">;</span>c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>tensor([[11., 22., 33.],
+        [41., 52., 63.]])</code></pre>
+</div>
+</div>
+<div id="4751ae82" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>c.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>torch.Size([2, 3])</code></pre>
+</div>
+</div>
+<p>So, what actually happened is, pytorch done broadcasting on tensor a to get it to the same size as b and then done element wise multiplication. In other words, first, pytorch has expanded a to match the dimensions of b and then done the element wise multiplication as shown below;</p>
+<div id="f1f955e2" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>a.expand_as(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>tensor([[1., 2., 3.],
+        [1., 2., 3.]])</code></pre>
+</div>
+</div>
+<p>See? we just replicate the tensor a to match it to the dimensions of tensor b. But, one may ask, how come this so useful if it gonna fill up the memory with the copiesof the same data right? The answer is it does not copy the same data to the memory. It only contains the original data that we given in the initialization.</p>
+<div id="8e9389b4" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>a.storage()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code> 1.0
+ 2.0
+ 3.0
+[torch.storage._TypedStorage(dtype=torch.float32, device=cpu) of size 3]</code></pre>
+</div>
+</div>
+<p>Like that, it only contains the initial data we given. Then how does it perform the broadcasting? Well, the pytorch use a neat trick with strides to copy elements in the memory to get the matching dimentions.</p>
+<div id="bf23127b" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> a.expand_as(b)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>w, w.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="21">
+<pre><code>(tensor([[1., 2., 3.],
+         [1., 2., 3.]]),
+ torch.Size([2, 3]))</code></pre>
+</div>
+</div>
+<div id="5e053865" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>w.stride()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<pre><code>(0, 1)</code></pre>
+</div>
+</div>
+<p>What does this mean? So, when we initialized tensor a at the beginning, the values 1, 2, and 3 are put into adjacent memory cells. The stride shows the way we should fill up the positions in the target dimensions. The first element refers to axis 0 and the second element refers to axis 1. So, 1 in (0,1) means, skip one memory location at a time to get to the next column whereas 0 in (0,1) means that we do not skip memory locations in dimension 0, i.e., raw wise.</p>
+<p>So, how can we get a higher dimensional array from a lower dimensional one? Well, there are two ways to do that. The first is to use unsqueeze(dim) and the second is to index our initial tensor with [None].</p>
+<div id="debf2524" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>a, a.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+<pre><code>(tensor([1., 2., 3.]), torch.Size([3]))</code></pre>
+</div>
+</div>
+<div id="0b5f08cd" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>a.unsqueeze(<span class="dv">0</span>), a[<span class="va">None</span>,:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="26">
+<pre><code>(tensor([[1., 2., 3.]]), tensor([[1., 2., 3.]]))</code></pre>
+</div>
+</div>
+<div id="5d847612" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>a.unsqueeze(<span class="dv">0</span>).shape, a[<span class="va">None</span>,:].shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="27">
+<pre><code>(torch.Size([1, 3]), torch.Size([1, 3]))</code></pre>
+</div>
+</div>
+<p>We can always skip trailing ‘:’s and you will see that in many cases. Furthermore, we can use’…’ to imply all the preceding dimensions</p>
+<div id="eba5c021" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>a[<span class="va">None</span>].shape, a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="28">
+<pre><code>(torch.Size([1, 3]), tensor([1., 2., 3.]))</code></pre>
+</div>
+</div>
+<div id="6533e07a" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>a[...,<span class="va">None</span>].shape, a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+<pre><code>(torch.Size([3, 1]), tensor([1., 2., 3.]))</code></pre>
+</div>
+</div>
+<p>As you see, we can expand the dimensions easily. The argument we pass into unsqueeze() is the position of the nex axis we want to add.</p>
+<p>However, there are certain rules associated with tensor operations; - Two tensors are compatible to perform tensor operations if their dimensions, starting from right to left; - equal or - one of them is one in which case we use <strong>broadcasting</strong> to get that one to the same dimension</p>
+<p>And that’s a wrap! Hope you were able to understand the concept of broadcasting a little more intuitively.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

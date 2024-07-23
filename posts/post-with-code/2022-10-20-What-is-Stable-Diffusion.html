@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kavindu Piyumal">
+<meta name="dcterms.date" content="2022-10-20">
 
-<title>blog</title>
+<title>Stable Diffusion Explained – blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +68,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">blog</span>
     </a>
   </div>
@@ -149,7 +91,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,251 +114,82 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Stable Diffusion Explained</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">analysis</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kavindu Piyumal </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 20, 2022</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(6)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="what-is-stable-diffusion" class="level1">
+<h1>What is Stable Diffusion?</h1>
+<p>Stable diffusion has made a revolutionary entry to world changing lots of state-of-the-art methods that was existing for such a long time. But what is stable diffusion? What are the main components of it? What is the architecture of it? There are so many questions! So let’stry to get a high-level understanding of what stable diffusionis.</p>
+<p>First, let’s take our usual mnist digit classifier for an example. As shown in the figure below, if we give it a handwritten image as the input, it will predict the value of that digit.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-1.png" class="img-fluid figure-img"></p>
+<figcaption>image.png</figcaption>
+</figure>
+</div>
+<p>But, what if we input the same image but with some noise now as shown below? Most of the time the model will be able to predict it correctly right?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-2.png" class="img-fluid figure-img"></p>
+<figcaption>image%20%281%29.png</figcaption>
+</figure>
+</div>
+<p>So, what does this mean? Basically, this means that our model is capable of differentiating the noise from the actual information.Isn’t this amazing? But, is there any way we can use this to generate images? This is exactly what diffusion models do. They start with pure noise and then they goes through a denoising process to get to the new generated image. Let’s see what modifications we have to do in order to get there.</p>
+<p>Firstly, in the above mentioned example, we have a multi-class classification case. So we will be using a backbone like ResNet as the model and change the head of the model accordingly. But, when it comes to the image generation, we want to get an image as the output. So what kind of a model should we use? Think of a similar kind of an application, where we input an image and get an image as the output. Did you guess it? Yes, we use a U-Net as our model.</p>
+<p>But, how do we use U-Net architecture to generate an image? So the catch is, we do not generate an image as the output. Think that we input an image with certain information with some amount of noise. We train our U-Net to predict the noise of the image. Then, we get the output, which is the noise, and substract it from the input to get the denoised image. The process is as shown below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-3.png" class="img-fluid figure-img"></p>
+<figcaption>image%20%282%29.png</figcaption>
+</figure>
+</div>
+<p>Okay,there are so many things to explain I know. But lets+’s get to there one step at a time. First thing to note is that, the U-Net is not able to predict the noise from just one step (as of October 2022, things change so fast :P). It will use something like a feedback loop here. In other words, it will predict the noise from the initial input and then, it will substract and the noise from the input and use the new image as the input in the next step. Likewise, it will continue this process for multiple number of steps.</p>
+<p>But the thing is, the U-Net architectures are so computationally expensive. It will work fine for mnist as they are 128x128 images, but what if we use an input of size 512x512. It will take hours right? So to reduce the computational complexity, we use a variational encoder. As you know, in a VAE, we have an encoder and an decoder. We first use the encoder to get input latents to the U-Net and continue the denoising process explained above to denoice the noisy latents. Then, we get the output of the U-Net and input that to the decoder to get the output image. Pretty cool right?!</p>
+<p>So you may ask now, how we can generate new images if we have to input the image we want to generate with some added noise to get back the image itself? The catch is, we input pure noise. That’s right. So our model starts with pure noise and then follow up with a denoising process to generate new images. But, if that’s the case, the output can be any random image right? Because, there is no assuarance that this will output ameaningful image by starting with pure noise without any guidance. Aha! we need some guidance! So, how we give guidance to our model to let them know about what kind of an output we are looking for? The answer is, we use a prompt. So a prompt is a description of the output we seeking for. But we cannot input a string to the model. It only recognizes features. So we use a text encoder to get encodings of the prompt. This is where CLIP comes in (I will cover the concept of CLIP in a future blog, for now, just think of it as a model that outputs text encodings).</p>
+<p>So now, we have everything we needs. We first initialize a random image of the output size we looking for which has to be a power of 2. Then, we use the encoder of the VAE to get the noisy latents. We parallely get the encodings of the prompt too. Then, we input this into our U-Net model and iteratively predict the noise for a predefined number of steps. Then, we get the output of the U-Net and input that into the decoder to get the spatial domain generated image.</p>
+<p>Hope, this blog gave you a high-level understanding of the idea of stable diffusion. In the coming blogs, I will dive into the mathematical aspect of diffusion models. To follow them, you will need to have some knowledge on random processes, Gaussian (Normal) distribution, and some calculus. So be ready!</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="code,analysis" data-listing-date-sort="1668229200000" data-listing-file-modified-sort="1721705151671" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="511">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external"></a></p><a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external">Meta Learning</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external">Recent development of meta learning has driven the industry to a complete different trajectory compared to the ordinary and traditional learning algorithms. In ordinary way…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external">
-<div class="listing-date">
-Nov 12, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="analysis" data-listing-date-sort="1666929600000" data-listing-file-modified-sort="1721705160779" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="520">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external"></a></p><a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external">Broadcasting</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external">In this blog, I am going to breakdown the idea of broadcasting in python. Broadcasting is one of the main concepts that you should know about to get the best out of deep…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external">
-<div class="listing-date">
-Oct 28, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="analysis" data-listing-date-sort="1666238400000" data-listing-file-modified-sort="1721705164111" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="895">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external"></a></p><a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external">
-<p class="card-img-top"><img src="posts/post-with-code/image-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external">Stable Diffusion Explained</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external">Stable diffusion has made a revolutionary entry to world changing lots of state-of-the-art methods that was existing for such a long time. But what is stable diffusion? What…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external">
-<div class="listing-date">
-Oct 20, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="code,analysis" data-listing-date-sort="1658721600000" data-listing-file-modified-sort="1721704689183" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="485">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external"></a></p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external">
-<p class="card-img-top"><img src="posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2)_files/figure-html/cell-28-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external">Multi Class Classification From Scratch (Part 2)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external">Welcome to part 2 of the mini blog series on multi class classification from scratch. In first part, we used pixel similarity to predict the class of the digit. In this one…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external">
-<div class="listing-date">
-Jul 25, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="code,analysis" data-listing-date-sort="1657857600000" data-listing-file-modified-sort="1721705180019" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="289">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external"></a></p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external">
-<p class="card-img-top"><img src="posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1)_files/figure-html/cell-10-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external">Multi Class Classification From Scratch (Part 1)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external">In this mini blog series, I am implementing multiclass classifier for MNIST digits from scratch. In this part, I will be classifying the digits using pixel similarity. I…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external">
-<div class="listing-date">
-Jul 15, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="analysis" data-listing-date-sort="1657598400000" data-listing-file-modified-sort="1721705171963" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="649">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external"></a></p><a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external">
-<p class="card-img-top"><img src="posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python_files/figure-html/cell-7-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external">Random Variables Explained</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external">In this blog, I am trying to give an introduction to random variables and follow up with an implementation of random numbers in python.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external">
-<div class="listing-date">
-Jul 12, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

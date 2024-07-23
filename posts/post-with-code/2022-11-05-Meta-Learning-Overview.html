@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kavindu Piyumal">
+<meta name="dcterms.date" content="2022-11-12">
 
-<title>blog</title>
+<title>Meta Learning – blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -128,17 +99,17 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">blog</span>
     </a>
   </div>
@@ -149,7 +120,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,251 +143,66 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Meta Learning</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">code</div>
+                <div class="quarto-category">analysis</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kavindu Piyumal </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 12, 2022</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(6)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="meta-learning---an-overview" class="level1">
+<h1>Meta Learning - An Overview</h1>
+<p>Recent development of meta learning has driven the industry to a complete different trajectory compared to the ordinary and traditional learning algorithms. In ordinary way, we have fixed learning algorithms to perform specific tasks. But in meta learning, we try to improve the learning algorithm so that it is able to perform a range of tasks from the same distribution.</p>
+<p>Let’s take a conventional supervised learning as an example. To start with the task, we will need a dataset <em>D</em> that is consisting of tuples of (x, y) where x refers to data points and y refers to labels. Then, we train a predictive model to predict labels; <span class="math inline">\(\hat{y}\)</span> = <span class="math inline">\(f_{\theta}\)</span>(x). Note that the model is parameterized by <span class="math inline">\(\theta\)</span>. We tarin the predictive model by solving;</p>
+<p><span class="math inline">\(\theta^{*}\)</span> = arg <span class="math inline">\(min_{\theta}\)</span> <em>L</em>(<em>D</em>;<span class="math inline">\(\theta\)</span>, <em>w</em>)</p>
+<p>In here, <em>L</em> is a loss function that measures the loss between the targets given in dataset <em>D</em> and predictions of <span class="math inline">\(f_{\theta}\)</span>. And we try to minimize the loss by adapting the parameters <span class="math inline">\(\theta\)</span> to get the optimal set of parameters <span class="math inline">\(\theta^{*}\)</span>. The <em>w</em> here refers to initial assumptions we made of optimization and learning function. This is what meta learning try to tackle. Instead of having a fixed w, what if we implement an algorithm that can learn to choose the best <em>w</em> when a new task is given? In that way, we will be able to generalize our learning algorithms for a range of tasks.</p>
+<p>Lke with the usual machine learning approach, in meta learning too we have a training step and a testing step. Let’s look into both steps one at a time. In the training step, we assume a a set <em>M</em> of relatable tasks sampled from <em>p</em>(<em>T</em>). Then, we have a collection of tasks same as we have a collection of data points and labels in the conventional way. However, each element in the collection is consisting of a validation dataset and a training dataset.i.e., <em>D</em><span class="math inline">\(_{source}\)</span> = (<em>D</em><span class="math inline">\(_{source}^{val}\)</span>, <em>D</em><span class="math inline">\(_{source}^{train}\)</span>)<span class="math inline">\(^{(i)}\)</span> for i=0, 1, … , M.</p>
+<p>Then, we can define the training step as below;</p>
+<p><span class="math inline">\(w^{*}\)</span> = arg <span class="math inline">\(min_{w}\)</span> <span class="math inline">\(\sum \limits_{i=1}^{M}\)</span> <em>L</em> <span class="math inline">\((D_{source}^{(i)};w)\)</span></p>
+<p>So, in the training step, we try to get the optimal w, i.e., <span class="math inline">\(w^{*}\)</span> by giving it the target tasks sampled from the distribution <em>p</em>(<em>T</em>).</p>
+<p>You see, in the conventional way, we always had the w, such as optimizers and learning functions fixed but in meta-learning, we train them in the training step. Once,the training is done, we move onto the testing stage. In there, we use the <span class="math inline">\(w^{*}\)</span> as the input along with a set of unseen tasks to train the base model on those unseen tasks.</p>
+<p><span class="math inline">\(\theta^{*}\)</span> = arg <span class="math inline">\(min_{\theta}\)</span> <em>L</em>(<span class="math inline">\(D_{target}^{train (i)}\)</span>;<span class="math inline">\(\theta\)</span>, <span class="math inline">\(w^{*}\)</span>)</p>
+<p>So, this is same as the conventional way but with the additional advantage of not having a fixed <em>w</em> but an adaptive <span class="math inline">\(w^{*}\)</span> that allow us to use it in a variety of tasks within a similar kind of distribution.</p>
+<p>So, hope you were able to get some idea about meta learning and its background. If you want to look into this further, I suggest <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9428530">this review paper</a> which was the reference for this article.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="code,analysis" data-listing-date-sort="1668229200000" data-listing-file-modified-sort="1721705151671" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="511">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external"></a></p><a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external">Meta Learning</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external">Recent development of meta learning has driven the industry to a complete different trajectory compared to the ordinary and traditional learning algorithms. In ordinary way…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-11-05-Meta-Learning-Overview.html" class="no-external">
-<div class="listing-date">
-Nov 12, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="analysis" data-listing-date-sort="1666929600000" data-listing-file-modified-sort="1721705160779" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="520">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external"></a></p><a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external">Broadcasting</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external">In this blog, I am going to breakdown the idea of broadcasting in python. Broadcasting is one of the main concepts that you should know about to get the best out of deep…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-10-28-Broadcasting-in-Python.html" class="no-external">
-<div class="listing-date">
-Oct 28, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="analysis" data-listing-date-sort="1666238400000" data-listing-file-modified-sort="1721705164111" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="895">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external"></a></p><a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external">
-<p class="card-img-top"><img src="posts/post-with-code/image-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external">Stable Diffusion Explained</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external">Stable diffusion has made a revolutionary entry to world changing lots of state-of-the-art methods that was existing for such a long time. But what is stable diffusion? What…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html" class="no-external">
-<div class="listing-date">
-Oct 20, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="code,analysis" data-listing-date-sort="1658721600000" data-listing-file-modified-sort="1721704689183" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="485">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external"></a></p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external">
-<p class="card-img-top"><img src="posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2)_files/figure-html/cell-28-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external">Multi Class Classification From Scratch (Part 2)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external">Welcome to part 2 of the mini blog series on multi class classification from scratch. In first part, we used pixel similarity to predict the class of the digit. In this one…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html" class="no-external">
-<div class="listing-date">
-Jul 25, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="code,analysis" data-listing-date-sort="1657857600000" data-listing-file-modified-sort="1721705180019" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="289">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external"></a></p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external">
-<p class="card-img-top"><img src="posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1)_files/figure-html/cell-10-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external">Multi Class Classification From Scratch (Part 1)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external">In this mini blog series, I am implementing multiclass classifier for MNIST digits from scratch. In this part, I will be classifying the digits using pixel similarity. I…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html" class="no-external">
-<div class="listing-date">
-Jul 15, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="analysis" data-listing-date-sort="1657598400000" data-listing-file-modified-sort="1721705171963" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="649">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external"></a></p><a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external">
-<p class="card-img-top"><img src="posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python_files/figure-html/cell-7-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external">Random Variables Explained</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external">In this blog, I am trying to give an introduction to random variables and follow up with an implementation of random numbers in python.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html" class="no-external">
-<div class="listing-date">
-Jul 12, 2022
-</div>
-<div class="listing-author">
-Kavindu Piyumal
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -2,8 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/post-with-code/2022-11-05-Meta-Learning-Overview.html",
+      "/posts/post-with-code/2022-10-28-Broadcasting-in-Python.html",
+      "/posts/post-with-code/2022-10-20-What-is-Stable-Diffusion.html",
+      "/posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 2).html",
+      "/posts/post-with-code/2022-10-03-Multiclass -Classification -from -Scratch -(Part 1).html",
+      "/posts/post-with-code/2022-10-12-Random-Variables-and-How-to-Implement-them-in-Python.html"
     ]
   }
 ]
