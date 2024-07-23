@@ -13,9 +13,6 @@ about:
     - icon: github
       text: Github
       href: https://github.com/Kavindu404
-    - icon: arrow-right-circle-fill
-      text: Website
-      href: https://kavindu404.github.io/index.html
       
 
 ---
@@ -30,7 +27,7 @@ BSc in Electrical and Electronic Engineering | Jan 2019 - Jan 2023
 
 ## Experience
 
-Center for Ocean-Atmospheric Prediction Studies | Research Asiistance | Nov 2023 - present
+Center for Ocean-Atmospheric Prediction Studies | Graduate Research Assistant | Nov 2023 - present
 
 Atlas Labs | Data Scientist | Jan 2023 - Jul 2023
 
